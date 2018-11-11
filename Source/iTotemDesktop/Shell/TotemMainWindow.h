@@ -12,19 +12,14 @@ class TotemMainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    private:
-        Ui::TotemMainWindow *ui;
-        SessionResolver* sessionResolver;
-        void LoadSession();
+private:
+    Ui::TotemMainWindow *ui;
+    SessionResolver* sessionResolver;
+    void LoadSession();
 
-    public:
-        explicit TotemMainWindow(QWidget *parent = nullptr);
-        ~TotemMainWindow();
-
-
-
-
+public:
+    explicit TotemMainWindow(QWidget *parent = nullptr);
+    ~TotemMainWindow();
 };
 
-
-#endif // TOTEMMAINWINDOW_H
+#endif
