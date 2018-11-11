@@ -1,12 +1,13 @@
 #ifndef SESSION_H
 #define SESSION_H
 
+#include "core_global.h"
 #include "Content.h"
 #include <list>
 
 using std::list;
 
-class Session {
+class CORESHARED_EXPORT Session {
 private:
     list<Content*>* content;
 public:

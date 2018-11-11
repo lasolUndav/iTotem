@@ -1,11 +1,12 @@
 #ifndef MEDIACONTENT_H
 #define MEDIACONTENT_H
 
+#include "core_global.h"
 #include <string>
 
 using std::string;
 
-class MediaContent {
+class CORESHARED_EXPORT MediaContent {
 private:
     string path;
     string type;

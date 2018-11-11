@@ -32,7 +32,8 @@ HEADERS += \
         Session.h \
     MediaContent.h \
     Content.h \
-    SessionServices.h
+    SessionServices.h \
+    core_global.h
 
 unix {
     target.path = /usr/lib

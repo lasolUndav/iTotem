@@ -1,6 +1,7 @@
 #ifndef CONTENT_H
 #define CONTENT_H
 
+#include "core_global.h"
 #include "MediaContent.h"
 #include <list>
 #include <string>
@@ -8,7 +9,7 @@
 using std::list;
 using std::string;
 
-class Content {
+class CORESHARED_EXPORT Content {
 private:
     string name;
     string description;

@@ -1,8 +1,9 @@
 #ifndef SESSIONSERVICES_H
 #define SESSIONSERVICES_H
+#include "core_global.h"
 #include "Session.h"
 
-class SessionServices
+class CORESHARED_EXPORT SessionServices
 {
 public:
     SessionServices();
