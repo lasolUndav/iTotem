@@ -1,18 +1,19 @@
 #ifndef SESSIONRESOLVER_H
 #define SESSIONRESOLVER_H
 
+#include "Session.h"
 #include "SessionServices.h"
 
 class SessionResolver
 {
+private:
+    SessionServices* service;
+    Session* current;
+
 public:
     SessionResolver();
+    virtual ~SessionResolver();
     Session* CurrentSession();
-
-private:
-    Session* current;
-     //Esta funcion es la responsable de traer la seccion actual
 };
 
-
-#endif // SESSIONRESOLVER_H
+#endif
