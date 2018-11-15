@@ -4,7 +4,7 @@
 #include <QWidget>
 #include "Content.h"
 #include "IContentView.h"
-
+#include "ContentViewPresenter.h"
 namespace Ui {
 class ContentView;
 }
@@ -21,6 +21,7 @@ public:
 
 private:
     Ui::ContentView *ui;
+    ContentViewPresenter* presenter;
 };
 
 #endif
