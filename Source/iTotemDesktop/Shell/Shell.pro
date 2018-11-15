@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         TotemMainWindow.cpp \
     ContentView.cpp \
-    SessionResolver.cpp
+    SessionResolver.cpp \
+    IContentView.cpp
 
 HEADERS += \
         TotemMainWindow.h \
     ContentView.h \
-    SessionResolver.h
+    SessionResolver.h \
+    IContentView.h
 
 FORMS += \
         TotemMainWindow.ui \
