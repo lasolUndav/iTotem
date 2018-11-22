@@ -13,7 +13,7 @@ class ContentViewPresenter{
     public:
         ContentViewPresenter(IContentView* view);
         void setContent(const Content* content);
-
+        void openContent();
 };
 
 #endif

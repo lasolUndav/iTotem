@@ -7,6 +7,7 @@ ContentView::ContentView(const Content* content, QWidget *parent) : QWidget(pare
     ui->setupUi(this);
     this->presenter= new ContentViewPresenter(this);
     this->presenter->setContent(content);
+    connect(ui->contentButton, SIGNAL (released()), this, SLOT (onClick()));
 }
 
 ContentView::~ContentView(){
@@ -15,4 +16,8 @@ ContentView::~ContentView(){
 
 void ContentView::setContentName(string name){
     ui->contentButton->setText(QString::fromUtf8(name.c_str()));
+}
+
+void ContentView::onClick(){
+    this->presenter->openContent();
 }

@@ -18,10 +18,13 @@ public:
     void setContentName(string name);
     ~ContentView();
 
+private slots:
+    void onClick();
 
 private:
     Ui::ContentView *ui;
     ContentViewPresenter* presenter;
+
 };
 
 #endif
