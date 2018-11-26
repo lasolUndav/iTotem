@@ -30,18 +30,24 @@ SOURCES += \
     ContentView.cpp \
     SessionResolver.cpp \
     IContentView.cpp \
-    ContentViewPresenter.cpp
+    ContentViewPresenter.cpp \
+    ContentListView.cpp \
+    MediaContentView.cpp
 
 HEADERS += \
         TotemMainWindow.h \
     ContentView.h \
     SessionResolver.h \
     IContentView.h \
-    ContentViewPresenter.h
+    ContentViewPresenter.h \
+    ContentListView.h \
+    MediaContentView.h
 
 FORMS += \
         TotemMainWindow.ui \
-    ContentView.ui
+    ContentView.ui \
+    ContentListView.ui \
+    MediaContentView.ui
 
 # Default rules for deployment.
 #qnx: target.path = /tmp/$${TARGET}/bin

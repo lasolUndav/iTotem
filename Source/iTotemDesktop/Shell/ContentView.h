@@ -5,6 +5,7 @@
 #include "Content.h"
 #include "IContentView.h"
 #include "ContentViewPresenter.h"
+
 namespace Ui {
 class ContentView;
 }

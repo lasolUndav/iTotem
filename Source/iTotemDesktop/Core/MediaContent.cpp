@@ -24,3 +24,11 @@ void MediaContent::setType(string type) {
 string MediaContent::getType() {
     return this->type;
 }
+void MediaContent::setName(string name){
+    this->name = name;
+}
+
+string MediaContent::getName(){
+    return this->name;
+
+}

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "SessionResolver.h"
+#include "ContentListView.h"
 
 namespace Ui {
 class TotemMainWindow;
@@ -15,7 +16,8 @@ class TotemMainWindow : public QMainWindow
 private:
     Ui::TotemMainWindow *ui;
     SessionResolver* sessionResolver;
-    void LoadSession();
+    ContentListView* contentList;
+    void loadSession();
 
 public:
     explicit TotemMainWindow(QWidget *parent = nullptr);

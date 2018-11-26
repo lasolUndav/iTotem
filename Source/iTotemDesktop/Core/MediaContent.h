@@ -10,6 +10,7 @@ class CORESHARED_EXPORT MediaContent {
 private:
     string path;
     string type;
+    string name;
 public:
     MediaContent();
     virtual ~MediaContent();
@@ -17,5 +18,7 @@ public:
     string getPath();
     void setType(string type);
     string getType();
+    void setName(string name);
+    string getName();
 };
 #endif
