@@ -9,7 +9,7 @@ using std::list;
 TotemMainWindow::TotemMainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::TotemMainWindow),sessionResolver(new SessionResolver){
     ui->setupUi(this);
     LoadSession();
-    QString url = R"(C:/projects/iTotem/Source/image/fondoTotem.png)";
+    QString url = R"(C:/projects/iTotem/Source/image/fondo.png)";
     QPixmap img(url);
     img.scaled(ui->label->width(),ui->label->height(), Qt::AspectRatioMode::IgnoreAspectRatio);
     ui->label->setPixmap(img);

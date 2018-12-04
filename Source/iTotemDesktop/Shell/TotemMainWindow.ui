@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
+    <width>780</width>
     <height>432</height>
    </rect>
   </property>
@@ -27,12 +27,15 @@
      <rect>
       <x>-11</x>
       <y>7</y>
-      <width>771</width>
+      <width>791</width>
       <height>431</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -40,7 +43,7 @@
      <rect>
       <x>-10</x>
       <y>0</y>
-      <width>771</width>
+      <width>791</width>
       <height>431</height>
      </rect>
     </property>
