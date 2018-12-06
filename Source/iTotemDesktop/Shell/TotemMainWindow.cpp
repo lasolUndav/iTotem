@@ -4,9 +4,17 @@
 #include "ContentView.h"
 #include "ContentListView.h"
 
+using std::list;
+
 TotemMainWindow::TotemMainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::TotemMainWindow),sessionResolver(new SessionResolver), contentList(new ContentListView) {
     ui->setupUi(this);
     loadSession();
+
+    QString url = R"(C:/projects/iTotem/Source/image/fondo.png)";
+    QPixmap img(url);
+    ui->label->setPixmap(img);
+    this->setStyleSheet("QPushButton { background-color: lightblue; }");
+
 }
 
 TotemMainWindow::~TotemMainWindow(){
