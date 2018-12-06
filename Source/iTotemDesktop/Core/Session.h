@@ -13,7 +13,7 @@ private:
 public:
     Session();
     virtual ~Session();
-    list<Content*>* getContent();
+    list<Content*>* getContent()const;
     void addContent(Content* content);
 };
 

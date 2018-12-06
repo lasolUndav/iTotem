@@ -11,8 +11,11 @@ void ContentViewPresenter::setContent(const Content* content){
     this->content=content;
     this->view->setContentName(content->getName());
 }
+
 void ContentViewPresenter::openContent(){
-    qDebug() << "Abriendo Contenido";
+    qDebug() << "Abriendo Contenido: ";
+    this->view->getParent()->loadContent(this->content);
+    qDebug() << "Abriendo+ ";
 }
 
 

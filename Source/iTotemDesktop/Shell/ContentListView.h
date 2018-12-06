@@ -5,6 +5,7 @@
 #include "Session.h"
 #include "Content.h"
 #include "list"
+#include "IContentListView.h"
 
 using std::list;
 
@@ -12,22 +13,22 @@ namespace Ui {
 class ContentListView;
 }
 
-class ContentListView : public QWidget
+class ContentListView : public QWidget, IContentListView
 {
     Q_OBJECT
 
 public:
     explicit ContentListView(QWidget *parent = nullptr);
-    void loadSession(Session *session);
-    void loadContent(Content *content);
+    void loadSession(const Session *session);
+    void loadContent(const Content *content);
     ~ContentListView();
 
 private:
     Ui::ContentListView *ui;
     list<QWidget*>* currentContentList;
     void clearCurrentList();
-    void loadContentListFromSession(Session *session);
-    void loadMediaContentListFromContent(Content *content);
+    void loadContentListFromSession(const Session *session);
+    void loadMediaContentListFromContent(const Content *content);
     void loadButtonList();
 };
 

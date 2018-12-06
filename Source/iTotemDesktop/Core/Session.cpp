@@ -17,7 +17,7 @@ Session::~Session() {
     delete this->content;
 }
 
-list<Content*>* Session::getContent(){
+list<Content*>* Session::getContent()const{
     return this->content;
 }
 

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "Content.h"
 #include "IContentView.h"
+#include "IContentListView.h"
 #include "ContentViewPresenter.h"
 
 namespace Ui {
@@ -15,8 +16,10 @@ class ContentView : public QWidget, public IContentView
     Q_OBJECT
 
 public:
-    explicit ContentView(const Content* content, QWidget *parent = nullptr);
+    explicit ContentView(IContentListView* list, const Content* content, QWidget *parent = nullptr);
     void setContentName(string name);
+    IContentListView* getParent();
+
     ~ContentView();
 
 private slots:
@@ -25,7 +28,7 @@ private slots:
 private:
     Ui::ContentView *ui;
     ContentViewPresenter* presenter;
-
+    IContentListView* parent;
 };
 
 #endif

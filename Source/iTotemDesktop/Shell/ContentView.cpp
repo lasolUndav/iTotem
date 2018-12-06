@@ -2,8 +2,9 @@
 #include "ui_ContentView.h"
 #include <QString>
 #include "ContentViewPresenter.h"
+#include "IContentListView.h"
 
-ContentView::ContentView(const Content* content, QWidget *parent) : QWidget(parent), ui(new Ui::ContentView){
+ContentView::ContentView(IContentListView* list, const Content* content, QWidget *parent) : QWidget(parent), ui(new Ui::ContentView), parent(list){
     ui->setupUi(this);
     this->presenter= new ContentViewPresenter(this);
     this->presenter->setContent(content);
@@ -21,3 +22,8 @@ void ContentView::setContentName(string name){
 void ContentView::onClick(){
     this->presenter->openContent();
 }
+
+IContentListView* ContentView::getParent(){
+    return this->parent;
+}
+

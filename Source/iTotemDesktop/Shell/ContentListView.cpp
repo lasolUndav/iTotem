@@ -20,30 +20,31 @@ ContentListView::~ContentListView()
     delete ui;
 }
 
-void ContentListView::loadSession(Session *session){
+void ContentListView::loadSession(const Session *session){
     clearCurrentList();
     loadContentListFromSession(session);
     loadButtonList();
 }
 
-void ContentListView::loadContent(Content *content){
+void ContentListView::loadContent(const Content *content){
     clearCurrentList();
     loadMediaContentListFromContent(content);
     loadButtonList();
 }
 
-void ContentListView::loadContentListFromSession(Session *session){
+void ContentListView::loadContentListFromSession(const Session *session){
     list<Content*> *listContent= session->getContent();
     list<Content*>::iterator contentIterator = listContent->begin();
     while(contentIterator != listContent->end()){
-        this->currentContentList->push_back(new ContentView(*contentIterator));
+        this->currentContentList->push_back(new ContentView(this,*contentIterator));
         contentIterator++;
     }
 }
 
-void ContentListView::loadMediaContentListFromContent(Content *content){
+void ContentListView::loadMediaContentListFromContent(const Content *content){
     list<MediaContent*> *listMediaContent= content->getMediaContent();
     list<MediaContent*>::iterator mediaContentIterator = listMediaContent->begin();
+
     while(mediaContentIterator != listMediaContent->end()){
         this->currentContentList->push_back(new MediaContentView(*mediaContentIterator));
         mediaContentIterator++;
@@ -67,4 +68,3 @@ void ContentListView::loadButtonList(){
         wIterator++;
     }
 }
-

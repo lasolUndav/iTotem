@@ -1,8 +1,8 @@
 #include "MediaContent.h"
 #include <string>
 
-MediaContent::MediaContent() {
-
+MediaContent::MediaContent(string name) {
+    setName(name);
 }
 
 MediaContent::~MediaContent() {

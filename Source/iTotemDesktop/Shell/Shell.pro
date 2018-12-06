@@ -32,7 +32,8 @@ SOURCES += \
     IContentView.cpp \
     ContentViewPresenter.cpp \
     ContentListView.cpp \
-    MediaContentView.cpp
+    MediaContentView.cpp \
+    IContentListView.cpp
 
 HEADERS += \
         TotemMainWindow.h \
@@ -41,7 +42,8 @@ HEADERS += \
     IContentView.h \
     ContentViewPresenter.h \
     ContentListView.h \
-    MediaContentView.h
+    MediaContentView.h \
+    IContentListView.h
 
 FORMS += \
         TotemMainWindow.ui \

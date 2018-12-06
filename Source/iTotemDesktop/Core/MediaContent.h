@@ -12,7 +12,7 @@ private:
     string type;
     string name;
 public:
-    MediaContent();
+    MediaContent(string name);
     virtual ~MediaContent();
     void setPath(string path);
     string getPath();

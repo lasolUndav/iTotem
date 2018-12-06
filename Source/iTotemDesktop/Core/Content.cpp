@@ -36,6 +36,6 @@ string Content::getDescription() const{
     return this->description;
 }
 
-list<MediaContent*>* Content::getMediaContent(){
+list<MediaContent*>* Content::getMediaContent()const{
     return this->mediaContent;
 }

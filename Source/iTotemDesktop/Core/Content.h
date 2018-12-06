@@ -21,7 +21,7 @@ public:
     string getName()const;
     void setDescription(string description);
     string getDescription()const;
-    list<MediaContent*>* getMediaContent();
+    list<MediaContent*>* getMediaContent()const;
 };
 
 #endif
