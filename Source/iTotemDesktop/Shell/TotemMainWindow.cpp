@@ -9,11 +9,7 @@ using std::list;
 TotemMainWindow::TotemMainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::TotemMainWindow),sessionResolver(new SessionResolver), contentList(new ContentListView) {
     ui->setupUi(this);
     loadSession();
-
-    QString url = R"(C:/projects/iTotem/Source/image/fondo.png)";
-    QPixmap img(url);
-    ui->label->setPixmap(img);
-    this->setStyleSheet("QPushButton { background-color: lightblue; }");
+    loadDesigner();
 
 }
 
@@ -28,6 +24,18 @@ void TotemMainWindow::loadSession(){
     if(session != nullptr){
 
         this->contentList->loadSession(session);
-        this->ui->contentViewLayout->addWidget(this->contentList);
+        this->ui->verticalLayout->addWidget(this->contentList);
     }
+}
+
+void TotemMainWindow::loadDesigner(){
+    //BACKGROUND
+    QString url = R"(C:/projects/iTotem/Source/image/fondo1.png)";
+    QPixmap img(url);   //load image
+    QPalette palette;
+    palette.setBrush(QPalette::Background, img);//set the pic to the background
+    this->setPalette(palette); //show the background pic
+
+    //DESIGNER BUTTONS
+    this->setStyleSheet("QPushButton { font: 75 16pt ""Calibri""; background-color: lightblue; width: 200px; height: 100px; }");
 }

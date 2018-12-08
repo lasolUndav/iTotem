@@ -18,6 +18,7 @@ private:
     SessionResolver* sessionResolver;
     ContentListView* contentList;
     void loadSession();
+    void loadDesigner();
 
 public:
     explicit TotemMainWindow(QWidget *parent = nullptr);
