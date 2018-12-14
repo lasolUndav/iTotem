@@ -30,7 +30,7 @@ void TotemMainWindow::loadSession(){
 
 void TotemMainWindow::loadDesigner(){
     //BACKGROUND
-    QString url = R"(C:/projects/iTotem/Source/image/fondo1.png)";
+    QString url = R"(C:/projects/iTotem/Source/image/fondo.jpg)";
     QPixmap img(url);   //load image
     QPalette palette;
     palette.setBrush(QPalette::Background, img);//set the pic to the background
